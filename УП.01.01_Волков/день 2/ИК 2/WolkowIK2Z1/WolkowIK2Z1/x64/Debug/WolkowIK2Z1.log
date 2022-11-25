@@ -1,0 +1,4 @@
+﻿  frmSumma.cpp
+C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 2\ИК 2\WolkowIK2Z1\WolkowIK2Z1\frmSumma.h(443,13): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  frmSumma.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  WolkowIK2Z1.vcxproj -> C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 2\ИК 2\WolkowIK2Z1\x64\Debug\WolkowIK2Z1.exe
