@@ -1,0 +1,4 @@
+﻿  MainForm.cpp
+C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 4\ИК 4\WolkowIK4Z1\WolkowIK4Z1\MainForm.h(195,9): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  MainForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  WolkowIK4Z1.vcxproj -> C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 4\ИК 4\WolkowIK4Z1\x64\Debug\WolkowIK4Z1.exe

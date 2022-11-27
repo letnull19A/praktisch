@@ -1,0 +1,4 @@
+C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 4\ИК 4\WolkowIK4Z1\WolkowIK4Z1\x64\Debug\WolkowIK4Z1.vcxproj.AssemblyReference.cache
+C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 4\ИК 4\WolkowIK4Z1\WolkowIK4Z1\x64\Debug\WolkowIK4Z1.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 4\ИК 4\WolkowIK4Z1\WolkowIK4Z1\x64\Debug\WolkowIK4Z1.MainForm.resources
+C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 4\ИК 4\WolkowIK4Z1\WolkowIK4Z1\x64\Debug\WolkowIK4Z1.vcxproj.GenerateResource.cache
