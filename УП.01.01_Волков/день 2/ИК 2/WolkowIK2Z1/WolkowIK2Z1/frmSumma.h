@@ -446,7 +446,13 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 
 	this->textDD->Text = sumPow.ToString();
 
-	double areaTri2 = sqrt((Int32::Parse(textAAA->Text) + Int32::Parse(textBBB->Text) + Int32::Parse(textCCC->Text)) / 2);
+	double perim = 0.5 * (Int32::Parse(textAAA->Text) + Int32::Parse(textBBB->Text) + Int32::Parse(textCCC->Text));
+
+	double areaTri2 = 
+		sqrt(perim * 
+			(perim - Int32::Parse(textAAA->Text)) * 
+			(perim - Int32::Parse(textBBB->Text)) * 
+			(perim - Int32::Parse(textCCC->Text)));
 
 	textDDD->Text = areaTri2.ToString();
 
