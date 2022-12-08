@@ -1,0 +1,171 @@
+unit Circles;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    PaintBox1: TPaintBox;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Panel1: TPanel;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+const
+  COLORS: array [1 .. 20] of tcolor = (clWebCrimson, clWebOrange,
+    clWebGreenYellow, clWebLightSeaGreen, clWebIndigo, clWebMediumVioletRed,
+    clteal, clWebOrangeRed, clWebDarkOrchid, clWebCrimson, clWebDeepPink,
+    clWebSlateBlue, clWebCornFlowerBlue, clfuchsia, clWebHotPink,
+    clWebDarkSeaGreen, clSilver, clWebDarkSlategray, clWebGoldenRod,
+    clWebChartreuse);
+
+var
+  isContinuing, isStarted: boolean;
+  EllipseArray: array [1 .. 10, 1 .. 4] of integer;
+  Count: integer;
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure setButtons();
+begin
+  Form2.Button1.Enabled := not(isStarted) or not(isContinuing);
+  Form2.Button2.Enabled := isContinuing or isStarted;
+end;
+
+procedure switchContinuing();
+begin
+  isContinuing := not(isContinuing);
+end;
+
+procedure setButtonsCaption();
+var
+  status: string;
+begin
+  if not(isContinuing and isStarted) then
+    status := 'Продолжить'
+  else
+    status := 'Остановить';
+
+  Form2.Button2.Caption := status;
+end;
+
+procedure deleteEllipse(x1, x2, y1, y2: integer);
+var
+  counter, index: integer;
+begin
+  if (Count > 10) then
+  begin
+    counter := Count mod 10;
+
+    if (counter = 0) then
+      counter := 10;
+
+    Form2.PaintBox1.Canvas.Pen.Color := clWhite;
+    Form2.PaintBox1.Canvas.Brush.Color := clWhite;
+    Form2.PaintBox1.Canvas.Ellipse(EllipseArray[counter, 1],
+      EllipseArray[counter, 2], EllipseArray[counter, 3],
+      EllipseArray[counter, 4]);
+
+    index := counter;
+  end
+  else
+  begin
+    index := Count;
+  end;
+
+  EllipseArray[index, 1] := x1;
+  EllipseArray[index, 2] := y1;
+  EllipseArray[index, 3] := x2;
+  EllipseArray[index, 4] := y2;
+
+end;
+
+procedure drawEllipse();
+var
+  penColor, brushColor: integer;
+  x1, y1, x2, y2: integer;
+begin
+  while (isContinuing) do
+  begin
+
+    x1 := random(Form2.PaintBox1.Width);
+    x2 := x1 + random(100);
+
+    y1 := random(Form2.PaintBox1.Height);
+    y2 := y1 + random(100);
+
+    brushColor := random(Length(COLORS)) + 1;
+
+    Form2.PaintBox1.Canvas.Brush.Color := COLORS[brushColor];
+    Form2.PaintBox1.Canvas.Ellipse(x1, y1, x2, y2);
+
+    Inc(Count);
+
+    deleteEllipse(x1, x2, y1, y2);
+
+    sleep(200);
+    Application.ProcessMessages();
+  end;
+end;
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+
+  isStarted := true;
+
+  switchContinuing();
+  setButtons();
+
+  if (not(isContinuing) and isStarted) then
+  begin
+    setButtonsCaption();
+  end
+  else
+  begin
+    drawEllipse();
+  end;
+
+end;
+
+procedure TForm2.Button2Click(Sender: TObject);
+begin
+  switchContinuing();
+  setButtons();
+  setButtonsCaption();
+  drawEllipse();
+end;
+
+procedure TForm2.Button3Click(Sender: TObject);
+begin
+  Form2.Close();
+end;
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+  Form2.Caption := 'Окружности';
+  Button1.Caption := 'Начать';
+  Button2.Caption := 'Остановить';
+  Button3.Caption := 'Выход';
+  isContinuing := false;
+  isStarted := false;
+  setButtons();
+  Count := 0;
+end;
+
+end.
