@@ -4,19 +4,21 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, U_Instr, U_Test, U_Result;
 
 type
   TU_Menu = class(TForm)
     MainMenu1: TMainMenu;
     N1: TMenuItem;
-    N2: TMenuItem;
-    N3: TMenuItem;
     N4: TMenuItem;
     N5: TMenuItem;
     N6: TMenuItem;
     N7: TMenuItem;
+    N2: TMenuItem;
     procedure N7Click(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+    procedure N4Click(Sender: TObject);
+    procedure N5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,6 +31,21 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TU_Menu.N2Click(Sender: TObject);
+begin
+  PagesDlg.ShowModal();
+end;
+
+procedure TU_Menu.N4Click(Sender: TObject);
+begin
+  PagesDlg1.ShowModal();
+end;
+
+procedure TU_Menu.N5Click(Sender: TObject);
+begin
+  Form2.ShowModal();
+end;
 
 procedure TU_Menu.N7Click(Sender: TObject);
 begin

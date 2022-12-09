@@ -14,8 +14,11 @@ type
     TabSheet2: TTabSheet;
     TabSheet3: TTabSheet;
     OKBtn: TButton;
-    CancelBtn: TButton;
-    HelpBtn: TButton;
+    Memo1: TMemo;
+    Memo2: TMemo;
+    Memo3: TMemo;
+    TabSheet4: TTabSheet;
+    Memo4: TMemo;
   private
     { Private declarations }
   public

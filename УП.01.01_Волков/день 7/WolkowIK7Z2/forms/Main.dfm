@@ -278,6 +278,19 @@ object Form1: TForm1
     ParentFont = False
     WordWrap = True
   end
+  object Label3: TLabel
+    Left = 215
+    Top = 194
+    Width = 58
+    Height = 14
+    Caption = #1042#1072#1096#1077' '#1080#1084#1103':'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsItalic, fsUnderline]
+    ParentFont = False
+  end
   object BitBtn1: TBitBtn
     Left = 215
     Top = 240
@@ -321,6 +334,7 @@ object Form1: TForm1
       19BB00003BDB00003BDB000019BB000000780000001800000000000000000000
       000000000000}
     TabOrder = 0
+    OnClick = BitBtn1Click
   end
   object BitBtn2: TBitBtn
     Left = 296
@@ -366,5 +380,13 @@ object Form1: TForm1
       000000000000}
     TabOrder = 1
     OnClick = BitBtn2Click
+  end
+  object Edit1: TEdit
+    Left = 215
+    Top = 213
+    Width = 176
+    Height = 21
+    TabOrder = 2
+    OnChange = Edit1Change
   end
 end

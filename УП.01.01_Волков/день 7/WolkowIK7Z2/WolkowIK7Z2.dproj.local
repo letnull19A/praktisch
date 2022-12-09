@@ -1,14 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.434,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\WolkowIK7Z2.dproj=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\WolkowIK7Z2.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.996,C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\Main.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.508,=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\Menu.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.595,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\Unit2.dfm=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\Menu.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.125,=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\TABPGDLG.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.389,=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\TABPGDLG.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.435,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\U_Result.dfm=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.239,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\U_Test.dfm=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\TABPGDLG.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.595,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\Unit2.pas=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\Menu.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.628,=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.196,=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.996,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\Main.pas=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.242,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\WolkowIK7Z2.dproj=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.984,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\U_Instr.pas=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\TABPGDLG.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.984,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\U_Instr.dfm=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\TABPGDLG.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.239,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\U_Test.pas=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\TABPGDLG.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.435,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\U_Result.pas=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.434,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\WolkowIK7Z2.dproj=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\WolkowIK7Z2.dproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.833,=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.996,C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\Main.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.242,C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\WolkowIK7Z2.dproj</Transaction>
-    <Transaction>2022.12.08 13:04:34.196,=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\Unit2.pas</Transaction>
-    <Transaction>2022.12.08 13:04:52.595,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\Menu.dfm=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\Unit2.dfm</Transaction>
-    <Transaction>2022.12.08 13:04:52.595,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\Menu.pas=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\Unit2.pas</Transaction>
-    <Transaction>2022.12.08 13:25:10.508,=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\Menu.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.996,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 7\WolkowIK7Z2\forms\Main.dfm=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>
