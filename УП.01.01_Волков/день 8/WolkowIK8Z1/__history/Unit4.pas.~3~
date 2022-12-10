@@ -1,0 +1,39 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm4 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Button1: TButton;
+    RadioGroup1: TRadioGroup;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+ Type TTEST = Record
+TEXT : String [250]; //Текст вопроса
+OTV : Array [1..4]of String [100]; //Варианты ответов
+REZ : Array [1..4]of Byte //Правильный ответ
+end;
+Var FF_R : File of TTEST; // Рабочий файл тестов
+KOL : Byte; // Количество вопросов в тесте
+KOL_N: Byte; // Текущий номер вопроса
+TEST_: TTEST; // Строка записи файла
+REZ_N: Byte; // Количество правильных ответов
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+end.

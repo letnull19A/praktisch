@@ -1,0 +1,167 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm4 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Button1: TButton;
+    RadioGroup1: TRadioGroup;
+    procedure FormActivate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+Type
+  TTEST = Record
+    TEXT: String[250]; // Текст вопроса
+    OTV: Array [1 .. 4] of String[100]; // Варианты ответов
+    REZ: Array [1 .. 4] of Byte // Правильный ответ
+    end;
+
+  Var
+    FF_R: File of TTEST; // Рабочий файл тестов
+    KOL: Byte; // Количество вопросов в тесте
+    KOL_N: Byte; // Текущий номер вопроса
+    TEST_: TTEST; // Строка записи файла
+    REZ_N: Byte; // Количество правильных ответов
+
+  var
+    Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm4.Button1Click(Sender: TObject);
+Var
+  N, I: Byte;
+  OZENKA: Byte;
+begin
+  If Button1.Caption = 'Результат' Then
+  begin
+    OZENKA := Round(REZ_N / KOL * 5);
+    Button1.Caption := 'Выход';
+    Label1.Visible := False;
+    RadioGroup1.Visible := False;
+    Label2.Font.Size := 12;
+    Label2.Left := 250;
+    Label2.Top := 150;
+    Label2.Caption := 'Количество правильных ответов - ' + IntToStr(REZ_N) +
+      ' из ' + IntToStr(KOL);
+    Label3.Font.Size := 14;
+    Label3.Font.Style := [fsBold];
+    Label3.Left := 300;
+    Label3.Top := 200;
+    Label3.Caption := 'Оценка';
+    Label4.Font.Size := 14;
+    Label4.Left := 350;
+    Label4.Top := 200;
+    Case OZENKA of
+      1 .. 2:
+        Label4.Font.Color := clPurple;
+      3:
+        Label4.Font.Color := clMaroon;
+      4:
+        Label4.Font.Color := clGreen;
+      5:
+        Label4.Font.Color := clNavy;
+    end;
+    Label4.Caption := IntToStr(OZENKA);
+  end
+  else If Button1.Caption = 'Выход' Then
+  begin
+    Close;
+    CloseFile(FF_R);
+  end
+  else
+  begin
+    N := RadioGroup1.ItemIndex + 1;
+    REZ_N := REZ_N + TEST_.REZ[N];
+    KOL_N := KOL_N + 1;
+    If KOL_N > KOL Then
+    begin
+      Label4.Caption := 'Правильных ответов - ' + IntToStr(REZ_N);
+      Button1.Caption := 'Результат'
+    end
+    else
+    begin
+      Label4.Caption := 'Правильных ответов - ' + IntToStr(REZ_N);
+      Read(FF_R, TEST_);
+      Label1.Caption := 'Вопрос № ' + IntToStr(KOL_N);
+      Label2.Caption := TEST_.TEXT;
+      RadioGroup1.Items.Clear;
+      For I := 1 to 4 do
+        RadioGroup1.Items.Add(TEST_.OTV[I]);
+    end;
+  end;
+end;
+
+procedure TForm4.FormActivate(Sender: TObject);
+Var
+  I: Byte;
+begin
+  AssignFile(FF_R, 'TEST_R.txt');
+  Reset(FF_R);
+  Read(FF_R, TEST_);
+  KOL := FileSize(FF_R) - 1;
+  KOL_N := 1;
+  REZ_N := 0;
+  Label1.Visible := True;
+  RadioGroup1.Visible := True;
+  Form4.Caption := TEST_.TEXT;
+  Form4.Height := 420;
+  Form4.Width := 850;
+  Label3.Caption := 'Всего вопросов - ' + IntToStr(KOL);
+  Label3.Top := 20;
+  Label3.Left := 700;
+  Label3.Font.Size := 8;
+  Label4.Caption := 'Правильных ответов - ' + IntToStr(REZ_N);
+  Label4.Top := 40;
+  Label4.Left := 700;
+  Label4.Font.Size := 8;
+  Label4.Font.Color := clBlack;
+  Button1.Caption := 'Следующий';
+  Button1.Top := 350;
+  Button1.Left := 720;
+  Button1.Width := 100;
+  Button1.Height := 30;
+  Read(FF_R, TEST_);
+  Label1.Caption := 'Вопрос № ' + IntToStr(KOL_N);
+  Label1.Font.Style := [fsBold];
+  Label1.Font.Size := 11;
+  Label1.Height := 50;
+  Label1.Width := 400;
+  Label1.Left := 40;
+  Label1.Top := 70;
+  Label2.Caption := TEST_.TEXT;
+  Label2.Font.Size := 12;
+  Label2.Height := 50;
+  Label2.Width := 500;
+  Label2.Left := 60;
+  Label2.Top := 100;
+  Label2.WordWrap := True;
+  Label2.AutoSize := False;
+  RadioGroup1.Top := 160;
+  RadioGroup1.Left := 60;
+  RadioGroup1.Width := 750;
+  RadioGroup1.Height := 150;
+  RadioGroup1.Font.Size := 11;
+  RadioGroup1.Caption := ' Выбери ответ ';
+  RadioGroup1.Items.Clear;
+  For I := 1 to 4 do
+    RadioGroup1.Items.Add(TEST_.OTV[I]);
+end;
+
+end.

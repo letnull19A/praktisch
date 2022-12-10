@@ -30,7 +30,7 @@ type
   private
     { Private declarations }
   public
-    { Public declarations }
+    procedure ResetForm();
   end;
 
 var
@@ -39,6 +39,15 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TPagesDlg1.ResetForm();
+begin
+  RadioGroup1.ItemIndex := -1;
+  RadioGroup2.ItemIndex := -1;
+  RadioGroup3.ItemIndex := -1;
+  RadioGroup4.ItemIndex := -1;
+  RadioGroup5.ItemIndex := -1;
+end;
 
 procedure TPagesDlg1.OKBtnClick(Sender: TObject);
 begin

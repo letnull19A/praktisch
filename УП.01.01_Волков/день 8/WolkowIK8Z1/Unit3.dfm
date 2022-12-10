@@ -1,0 +1,93 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = #1042#1099#1073#1086#1088' '#1090#1077#1089#1090#1072
+  ClientHeight = 441
+  ClientWidth = 624
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  OldCreateOrder = True
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 83
+    Top = 241
+    Width = 122
+    Height = 22
+    Caption = #1042#1074#1077#1076#1080#1090#1077' '#1060#1048#1054
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 72
+    Top = 293
+    Width = 135
+    Height = 22
+    Caption = #1042#1074#1077#1076#1080#1090#1077' '#1075#1088#1091#1087#1087#1091
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 98
+    Top = 360
+    Width = 95
+    Height = 25
+    Caption = #1053#1072#1095#1072#1090#1100' '#1090#1077#1089#1090
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 424
+    Top = 360
+    Width = 75
+    Height = 25
+    Caption = #1042#1099#1093#1086#1076
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 178
+    Top = 42
+    Width = 215
+    Height = 152
+    Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1090#1077#1089#1090
+    TabOrder = 2
+  end
+  object Edit1: TEdit
+    Left = 226
+    Top = 240
+    Width = 287
+    Height = 23
+    TabOrder = 3
+  end
+  object Edit2: TEdit
+    Left = 226
+    Top = 292
+    Width = 287
+    Height = 23
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 264
+    Top = 360
+    Width = 97
+    Height = 25
+    Caption = #1057#1086#1079#1076#1072#1090#1100' '#1090#1077#1089#1090
+    TabOrder = 5
+    OnClick = Button3Click
+  end
+end

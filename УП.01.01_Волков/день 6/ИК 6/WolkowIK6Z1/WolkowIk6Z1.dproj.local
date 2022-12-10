@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.485,C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\MainForm.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.714,C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\WolkowIk6Z1.dproj=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 6\ИК 6\WolkowIK6Z1\WolkowIk6Z1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.820,C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\WolkowIk6Z1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.485,C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\MainForm.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.824,=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022.12.07 23:35:22.078,=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 6\ИК 6\WolkowIK6Z1\Forms\Circles.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.714,C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 6\ИК 6\WolkowIK6Z1\WolkowIk6Z1.dproj=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\WolkowIk6Z1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.820,C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\WolkowIk6Z1.dproj=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.485,C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\MainForm.pas=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.078,=C:\Users\0XAD08GPAS\Desktop\praktisch\УП.01.01_Волков\день 6\ИК 6\WolkowIK6Z1\Forms\Circles.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.485,C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\MainForm.dfm=C:\Users\0XAD08GPAS\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

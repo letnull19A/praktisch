@@ -1,0 +1,173 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm4 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Button1: TButton;
+    RadioGroup1: TRadioGroup;
+    procedure FormActivate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+Type
+  TTEST = Record
+    TEXT: String[250]; // Текст вопроса
+    OTV: Array [1 .. 4] of String[100]; // Варианты ответов
+    REZ: Array [1 .. 4] of Byte // Правильный ответ
+    end;
+
+  Var
+    FF_R: File of TTEST; // Рабочий файл тестов
+    KOL: Byte; // Количество вопросов в тесте
+    KOL_N: Byte; // Текущий номер вопроса
+    TEST_: TTEST; // Строка записи файла
+    REZ_N: Byte; // Количество правильных ответов
+
+  var
+    Form4: TForm4;
+    totalCorrect : integer;
+    questionCount : double;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit3, Unit2;
+var
+  currentStep : Byte;
+  correctAnswers : array[1..20,1..4] of Byte;
+  userAnswers : array[1..20] of Integer;
+
+procedure CheckAnswers();
+begin
+  if (correctAnswers[currentStep][userAnswers[currentStep] + 1] = 1) then
+   Inc(totalCorrect);
+end;
+procedure TForm4.Button1Click(Sender: TObject);
+var
+  line : string;
+  i : byte;
+  buttonSelected : integer;
+begin
+
+  if (currentStep = questionCount) then
+  begin
+    buttonSelected := MessageDlg('Вы действительно хотите завершить тестирование?', mtConfirmation, [mbYes,mbCancel], 0);
+    if (buttonSelected = mrYes) then
+    begin
+      userAnswers[currentStep] := RadioGroup1.ItemIndex;
+      CheckAnswers();
+      label4.Caption := 'Верных ответов - ' + IntToStr(totalCorrect);
+
+      Form2.Show();
+      Form4.Close();
+    end;
+  end
+  else
+  begin
+    userAnswers[currentStep] := RadioGroup1.ItemIndex;
+    CheckAnswers();
+
+    label4.Caption := 'Верных ответов - ' + IntToStr(totalCorrect);
+
+    Inc(currentStep);
+
+    label1.Caption := 'Вопрос № ' + IntToStr(currentStep);
+
+    RadioGroup1.Items.Clear();
+
+    AssignFile(ffile, fileName);
+    reset(ffile);
+
+    readln(ffile);
+
+    for I := 1 to (currentStep - 1) * 9 do
+    begin
+      readln(ffile);
+    end;
+
+    readln(ffile, line);
+    Label2.Caption := line;
+
+    for i := 1 to 4 do
+    begin
+      readln(ffile, line);
+      RadioGroup1.Items.Add(line);
+    end;
+
+    for i := 1 to 4 do
+    begin
+      readln(ffile, line);
+      correctAnswers[currentStep][i] := StrToInt(line);
+    end;
+
+    closefile(ffile);
+  end;
+end;
+
+procedure TForm4.FormActivate(Sender: TObject);
+var
+  line : string;
+  i : Byte;
+begin
+  currentStep := 1;
+
+  Assignfile(ffile, fileName);
+  Reset(ffile);
+
+  readln(ffile, line);
+  Form4.Caption := line;
+
+  readln(ffile, line);
+  Label2.caption := line;
+
+  for i := 1 to 4 do
+  begin
+    readln(ffile, line);
+    RadioGroup1.Items.Add(line);
+  end;
+
+  for i := 1 to 4 do
+  begin
+    readln(ffile, line);
+    correctAnswers[currentStep][i] := StrToInt(line);
+  end;
+
+
+  closefile(ffile);
+
+  label1.Caption := 'Вопрос № ' + IntToStr(currentStep);
+
+  Assignfile(ffile, fileName);
+  Reset(ffile);
+
+  while(not eof(ffile)) do
+  begin
+    readln(ffile);
+    questionCount := questionCount + 1;
+  end;
+
+  closefile(ffile);
+
+  totalCorrect := 0;
+
+  questionCount := (questionCount - 1) / 9;
+
+  label3.Caption := 'Всего вопросов - ' + FloatToStr(questionCount);
+end;
+
+end.

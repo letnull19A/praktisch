@@ -42,12 +42,13 @@ implementation
 
 {$R *.dfm}
 
-uses Main;
+uses Main, U_Test;
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
   UserName := string.Empty;
   Main.Form1.Edit1.Text := string.Empty;
+  PagesDlg1.ResetForm();
   Ball := 0;
   Close();
 end;
